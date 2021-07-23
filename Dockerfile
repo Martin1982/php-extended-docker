@@ -8,6 +8,8 @@ RUN apk add composer
 RUN apk add libzip-dev
 RUN apk add libpng-dev
 ADD usr/local/etc/php/conf.d/memory.ini /usr/local/etc/php/conf.d/memory.ini
+ADD usr/local/etc/php/conf.d/realpath.ini /usr/local/etc/php/conf.d/realpath.ini
+ADD usr/local/etc/php/conf.d/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install pdo
