@@ -16,4 +16,6 @@ RUN docker-php-ext-install zip
 RUN docker-php-ext-install pdo
 RUN docker-php-ext-install pdo_mysql
 RUN pecl install -o -f redis && rm -rf /tmp/pear && docker-php-ext-enable redis
+RUN pecl install -o -f pcov && rm -rf /tmp/pear && docker-php-ext-enable pcov
+RUN pecl install -o -f xdebug && rm -rf /tmp/pear && docker-php-ext-enable xdebug
 RUN wget https://get.symfony.com/cli/installer -O - | bash
